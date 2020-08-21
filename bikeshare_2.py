@@ -177,11 +177,20 @@ def main():
     while True:
         city, month, day = get_filters()
         df = load_data(city, month, day)
-        
+
+        # Check if the user wants to see some raw data first        
         display_raw_data(df)
+
+        # Display time stats
         time_stats(df)
+
+        # Display station stats
         station_stats(df)
+
+        # Display trip duration stats
         trip_duration_stats(df)
+        
+        # Display user stats
         user_stats(df)
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
