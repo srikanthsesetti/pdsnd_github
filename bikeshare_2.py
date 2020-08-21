@@ -162,17 +162,23 @@ def user_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
+def display_raw_data(df):    
+    counter = 0
+    user_input = input('\nDo you want to see 5 lines of raw data? Enter yes or no.\n').lower() 
+    while True :
+        if user_input != 'no':
+            print(df.iloc[counter : counter + 5])
+            counter += 5
+            user_input = input('\nDo you want to see more raw data? Enter yes or no.\n')
+        else:
+            break
+
 def main():
     while True:
         city, month, day = get_filters()
         df = load_data(city, month, day)
         
-        # check if the user wishes to see raw data
-        raw_data = input('Do you wish to see first 5 rows fo the raw data:')
-        while raw_data.lower() == 'yes':
-            print(df.head())
-            raw_data = input('Do you wish to see first 5 rows fo the raw data:')
-        
+        display_raw_data(df)
         time_stats(df)
         station_stats(df)
         trip_duration_stats(df)
