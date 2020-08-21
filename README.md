@@ -12,7 +12,7 @@ Calclulate statistics and build an interactive environment where a user chooses 
 bikeshare_2.py
 
 ### Credits
-https://stackoverflow.com/ 
-https://docs.python.org/
-https://pandas.pydata.org/
-https://docs.scipy.org/
+https://stackoverflow.com/   
+https://docs.python.org/  
+https://pandas.pydata.org/  
+https://docs.scipy.org/  
