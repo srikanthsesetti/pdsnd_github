@@ -14,3 +14,5 @@ bikeshare_2.py
 ### Credits
 https://stackoverflow.com/ 
 https://docs.python.org/
+https://pandas.pydata.org/
+https://docs.scipy.org/
